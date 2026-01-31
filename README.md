@@ -327,13 +327,17 @@ I usually go for these settings:
 
 **Proxmox UI:** `Datacenter → Backup → Add`
 
-### General
+#### General
 - **Schedule:** 04:00 (Daily at 4AM)
 - **Mode:** `Suspend`
 - **Selection Mode:** `Include selected VMs`  
   *(1 backup job per VM / container)*
 
-### Retention
+#### Retention
 - **Daily:** `3`
 - **Weekly:** `4`
 - **Monthly:** `2`
+
+## Useful Links
+
+https://support.hytale.com/hc/en-us/articles/45326769420827-Hytale-Server-Manual
