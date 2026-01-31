@@ -230,7 +230,12 @@ You need to authenticate once to make the server work.
    /stop
    ```
 
-7. Start the service again:
+7. Change File Owner to hytale:
+   ```bash
+   chown -R hytale:hytale /opt/hytale
+   ```
+
+8. Start the service again:
    ```bash
    systemctl start hytale
    ```
@@ -341,3 +346,14 @@ I usually go for these settings:
 ## Useful Links
 
 https://support.hytale.com/hc/en-us/articles/45326769420827-Hytale-Server-Manual
+
+## Join me!
+
+If you want to join my Creative Hytale Server, feel free to! 
+
+#### Server: 
+```bash
+tronnic-srv.duckdns.org:5521
+```
+
+If you play there and decide to leave at some point, I don't mind exporting the World / Playerdata for you 😃
