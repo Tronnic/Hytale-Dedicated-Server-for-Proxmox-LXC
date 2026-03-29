@@ -273,6 +273,13 @@ rm 2026*.zip
 systemctl start hytale
 ```
 
+If you ran your server for a while and get an "error fetching manifest" when trying to update, delete your updater credential file, run the hytale-downloader again and reauthenticate.
+
+To delete the file:
+```bash
+rm -f /opt/hytale/.hytale-downloader-credentials.json
+```
+
 ---
 
 ## 🧠 Important to remember
