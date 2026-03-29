@@ -282,6 +282,60 @@ rm -f /opt/hytale/.hytale-downloader-credentials.json
 
 ---
 
+## ♻️ 1️⃣2️⃣ Enable Automatic Updates
+
+Hytale has a built-in update system. It can check for updates automatically and apply them without needing a separate cronjob or systemd timer.
+
+Stop the server and open the config:
+
+```bash
+systemctl stop hytale
+cd /opt/hytale/Server
+nano config.json
+```
+
+Replace this part:
+
+```bash
+  "Update": {},
+  "Backup": {}
+```
+
+with this:
+
+```bash
+  "Update": {
+    "Enabled": true,
+    "CheckIntervalSeconds": 3600,
+    "NotifyPlayersOnAvailable": true,
+    "Patchline": null,
+    "RunBackupBeforeUpdate": true,
+    "BackupConfigBeforeUpdate": true,
+    "AutoApplyMode": "Scheduled",
+    "AutoApplyDelayMinutes": 30
+  },
+  "Backup": {}
+```
+
+Save with CTRL+O, confirm with ENTER, then exit with CTRL+X.
+
+Start the server again:
+
+```bash
+systemctl start hytale
+journalctl -u hytale -f
+```
+
+What this does
+CheckIntervalSeconds: 3600 → checks for updates every hour
+AutoApplyMode: "Scheduled" → installs updates automatically
+AutoApplyDelayMinutes: 30 → waits 30 minutes before applying the update
+RunBackupBeforeUpdate: true → creates a backup before updating
+BackupConfigBeforeUpdate: true → backs up config before updating
+
+
+---
+
 ## 🧠 Important to remember
 
 **Start Server** (Automatic on boot)
