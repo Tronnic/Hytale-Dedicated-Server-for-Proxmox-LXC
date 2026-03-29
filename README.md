@@ -282,7 +282,7 @@ rm -f /opt/hytale/.hytale-downloader-credentials.json
 
 ---
 
-## ♻️ 1️⃣2️⃣ Enable Automatic Updates
+## ♻️ 1️⃣2️⃣ OPTIONAL: Enable Automatic Updates
 
 Hytale has a built-in update system. It can check for updates automatically and apply them without needing a separate cronjob or systemd timer.
 
