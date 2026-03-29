@@ -327,10 +327,15 @@ journalctl -u hytale -f
 ```
 
 What this does
+
 CheckIntervalSeconds: 3600 → checks for updates every hour
+
 AutoApplyMode: "Scheduled" → installs updates automatically
+
 AutoApplyDelayMinutes: 30 → waits 30 minutes before applying the update
+
 RunBackupBeforeUpdate: true → creates a backup before updating
+
 BackupConfigBeforeUpdate: true → backs up config before updating
 
 
