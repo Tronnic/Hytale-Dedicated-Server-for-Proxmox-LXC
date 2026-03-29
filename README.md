@@ -323,7 +323,6 @@ Start the server again:
 
 ```bash
 systemctl start hytale
-journalctl -u hytale -f
 ```
 
 What this does
